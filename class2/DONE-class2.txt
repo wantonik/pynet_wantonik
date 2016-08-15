@@ -1,0 +1,7 @@
+## Scripts has been done and all the excercised practiced.
+## I had difficulties with making the snmp script i.e.
+## I tried to use a list of IPs and another list of OIDs,
+## and then wanted to form 'for' loop to iterate through them
+## to pick up the right ID-OID pairs for each routers (rtr1/rtr2).
+## I faced issues, where snmpwalk or snmpget expected string as IP address or OID.
+## I failed to fix it.
