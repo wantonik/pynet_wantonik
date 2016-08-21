@@ -3,7 +3,7 @@ import yaml, json
 
 
 routers = [{'rtr1': [{'hostname':'pynet-rtr1'}, {'ip_addr':'184.105.247.70'}, {'username':'pyclass'}, {'password':'secret'}]},\
-           {'rtr2': [{'hostname':'pynet-rtr2'}, {'ip_addr':'184.105.247.71'}, {'username':'pyclass'}, {'password':'secret'}]},\
+           {'rtr2': [{'hostname':'pynet-rtr2'}, {'ip_addr':'184.105.247.71'}, {'username':'pyclass'}, {'password':'secret'}]},
            {'model': 'Cisco_881'}]
 
 switches = [{'sw1': [{'hostname':'pynet-sw1'}, {'ip_addr':'184.105.247.72'}, {'username':'admin1'}, {'password':'secret'}]},\
