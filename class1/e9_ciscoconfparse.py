@@ -22,3 +22,11 @@ for obj in crypto_map:
     print 'set pfs group2', obj.text
 quit()
 
+
+'''
+From Kirk:
+"You have an error in your logic in exercise9 that you need to fix.
+You are actually printing out all of the crypto maps regardless of
+whether they are using pfs group2 (or not)."
+>>I have amended that in _v2 of this file.
+'''
