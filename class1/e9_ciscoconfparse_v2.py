@@ -17,13 +17,9 @@ print 'Show me only lines with "crypto map CRYPTO" string: '
 for obj in crypto_map:
     print obj.text
 
-# Iterating crypto_map variable to show parent-child relationship with the specific string only - 'set pfs group2'
+# Iterating crypto_map variable to show parent-child relationship
+# with the specific string only - 'set pfs group2'
 print 'Show me only lines which contain "set pfs group2" string: '
 for obj in crypto_map:
     for child in obj.re_search_children("set pfs group2"):
         print obj.text, child.text
-#############################
-#for obj in crypto_map:
-#    print obj.text
-#    for child in obj.children:
-#        print child.text
