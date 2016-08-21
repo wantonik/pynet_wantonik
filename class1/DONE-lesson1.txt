@@ -1,6 +1,10 @@
 Hi Kirk,
-I completed this lesson as for now.
-If you have any suggestion on how I could improve my code, that'd help me to improve my Python.
+I completed this lesson and amended as per your suggestions.
+If you have any suggestion on how I could improve it any further
+, let me know.
+I am having problems with nested for loops where I want to get specific lines,
+or sometimes parent and child line. They all feed from one global variable (cisco_cfg).
+
 thanks
 Rgds
 Waldi
