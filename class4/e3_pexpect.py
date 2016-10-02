@@ -16,20 +16,25 @@ def main():
     try:
         ssh_conn = pexpect.spawn('ssh -l {} {} -p {}'.format(username, ip_addr, port))
         ssh_conn.timeout = 3
-        ssh_conn.expect('ssword:')    ## Expects to see line with this string on router
-        ssh_conn.sendline(password)   ## We then send the password to log in on router
-        ssh_conn.expect('pynet-rtr2#') ## To see the prompt on the server
-
+        ## Expects to see line with 'ssword' string on router
+        ssh_conn.expect('ssword:')
+        ## We then send the password to log in on router
+        ssh_conn.sendline(password)
+        ## To see the prompt on router
+        ssh_conn.expect('pynet-rtr2#')
+        
+        ## Execute 'show ip int brief' command to router
         ssh_conn.sendline('show ip int brief\n')
         ssh_conn.expect('pynet-rtr2#')
         print ssh_conn.before
 
-        ssh_conn.sendline('terminal length 0')    ## Disable 'more' paging
+        ## Disable 'more' paging
+        ssh_conn.sendline('terminal length 0')
         ssh_conn.expect('pynet-rtr2#')
         print ssh_conn.before
         print ssh_conn.after
     
-    ## Catching timeout errors and other from the above section
+    ## Catching timeout and other errors from the above section
     except pexpect.TIMEOUT:
         print 'Found timeout or other error - check your code: variables, args.'
 
@@ -40,4 +45,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

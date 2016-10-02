@@ -32,7 +32,7 @@ def main():
    
     def show_run_command():
         ''' 'show run' before changing logging buffer size '''
-        ssh_conn.sendline('show run\n')
+        ssh_conn.sendline('show run | inc logging buffer\n')
         ssh_conn.expect('pynet-rtr2#')
         print ssh_conn.before
 

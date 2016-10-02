@@ -34,7 +34,8 @@ def connect_to_host():
     global remote_conn
     remote_conn = remote_conn_pre.invoke_shell()
     outp = remote_conn.recv(5000)
-    print '\n', 40 * '*', '\n', 'If prompt received below, you are connected...', '\n', outp
+    print '\n', 40 * '*', '\n'
+    print 'If prompt received below, you are connected...', '\n', outp
     remote_conn.settimeout(6.0)    ## Wait for the data 6sec
     print 40 * '*'
     remote_conn.send("terminal length 0\n")
@@ -47,7 +48,7 @@ def show_logging_size():
     ''' Send 'show version' to router and display on screen.'''
     remote_conn.send("\n")
     time.sleep(1)
-    remote_conn.send('show logging')
+    remote_conn.send('show logging | inc Log Buffer')
     time.sleep(3)
     remote_conn.send("\n")
     time.sleep(1)
