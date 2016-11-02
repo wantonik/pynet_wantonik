@@ -1,0 +1,17 @@
+---
+## Create an Ansible playbook that generates five switch configurations
+## based on the given partial switch configuration.
+## The hostname, ip_addr, and default_gateway should be unique for each switch.
+
+- hosts: localhost
+  tasks:
+    - name: Generate config file for 5 switches
+      template: src=/home/wantonik/pynet_wantonik/class5/e1/access_switch.j2
+                dest=/home/wantonik/pynet_wantonik/class5/e1/{{item.hostname}}.txt
+
+      with_items:
+        - {hostname: pynet-sw1, ip_addr: 184.105.247.72, default_gateway: 184.105.247.0, secret: <secret>, access_vlan: 247, snmp_community: <community>}
+        - {hostname: pynet-sw2, ip_addr: 184.105.247.73, default_gateway: 184.105.247.1, secret: <secret>, access_vlan: 247, snmp_community: <community>}
+        - {hostname: pynet-sw3, ip_addr: 184.105.247.74, default_gateway: 184.105.247.2, secret: <secret>, access_vlan: 247, snmp_community: <community>}
+        - {hostname: pynet-sw4, ip_addr: 184.105.247.75, default_gateway: 184.105.247.3, secret: <secret>, access_vlan: 247, snmp_community: <community>}
+        - {hostname: pynet-jnpr-srx1, ip_addr: 184.105.247.76, default_gateway: 184.105.247.4, secret: <secret>, access_vlan: 247, snmp_community: <community>}
