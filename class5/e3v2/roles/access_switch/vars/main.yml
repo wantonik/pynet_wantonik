@@ -1,0 +1,7 @@
+---
+switches:
+  - {hostname: pynet-sw1, ip_addr: 184.105.247.72, default_gateway: 184.105.247.0, secret: <secret>, access_vlan: 247, snmp_community: <community>, SNMPv3: True}
+  - {hostname: pynet-sw2, ip_addr: 184.105.247.73, default_gateway: 184.105.247.1, secret: <secret>, access_vlan: 247, snmp_community: <community>, SNMPv3: True}
+  - {hostname: pynet-sw3, ip_addr: 184.105.247.74, default_gateway: 184.105.247.2, secret: <secret>, access_vlan: 247, snmp_community: <community>, SNMPv3: False}
+  - {hostname: pynet-sw4, ip_addr: 184.105.247.75, default_gateway: 184.105.247.3, secret: <secret>, access_vlan: 247, snmp_community: <community>, SNMPv3: False}
+  - {hostname: pynet-jnpr-srx1, ip_addr: 184.105.247.76, default_gateway: 184.105.247.4, secret: <secret>, access_vlan: 247, snmp_community: <community>, SNMPv3: True}

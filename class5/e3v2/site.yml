@@ -1,0 +1,10 @@
+---
+# Using a Jinja2 for-loop in access_switch.j2 create all of 
+# the 1-24 interfaces with specific configuration.
+
+
+- name: Generate configuration file
+  hosts: local
+
+  roles:
+    - access_switch
