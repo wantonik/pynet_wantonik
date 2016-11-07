@@ -1,0 +1,39 @@
+---
+# Using Ansible, configure three VLANs on the Arista switch specifying both:
+# the VLAN IDs and the VLAN names.  For the VLAN IDs randomly pick three 
+# numbers between 100 and 999.
+# This playbook can be ran from any directory (dst/src given).
+
+- name: Create Arista VLANs
+  hosts: arista
+
+  tasks:
+    - name: create FIRST VLAN
+      template: src=/home/wantonik/ANSIBLE/library/eos_vlan.py
+                dest=/home/wantonik/pynet_wantonik/class6/second_vlan.txt
+          name=FIRST vlanid=101
+          username={{ eapi_username }}
+          password={{ eapi_password }}
+          host={{ eapi_hostname }}
+          port={{ eapi_port }}
+          transport=https
+
+    - name: create SECOND VLAN
+      template: src=/home/wantonik/ANSIBLE/library/eos_vlan.py
+                dest=/home/wantonik/pynet_wantonik/class6/second_vlan.txt
+          name=SECOND vlanid=111
+          username={{ eapi_username }}
+          password={{ eapi_password }}
+          host={{ eapi_hostname }}
+          port={{ eapi_port }}
+          transport=https
+
+    - name: create THIRD VLAN
+      template: src=/home/wantonik/ANSIBLE/library/eos_vlan.py
+                dest=/home/wantonik/pynet_wantonik/class6/third_vlan.txt
+          name=THIRD vlanid=121
+          username={{ eapi_username }}
+          password={{ eapi_password }}
+          host={{ eapi_hostname }}
+          port={{ eapi_port }}
+          transport=https

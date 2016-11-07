@@ -1,0 +1,19 @@
+---
+# Use the cisco_file_transfer.py module to transfer a small 
+# file to the Cisco pynet-rtr1 router.
+
+- name: Cisco IOS file transfer - testing by wantonik
+  hosts: pynet-rtr1
+  gather_facts: False
+
+  tasks:
+  - name: User wantonik sending a file to pynet-rtr1
+    cisco_file_transfer:
+      source_file="/home/wantonik/ANSIBLE/wantonik_logging.txt"
+      dest_file=wantonik_logging.txt
+      overwrite=true
+      enable_scp=true
+      host={{ host }}
+      port={{ port }}
+      username={{ username }}
+      password={{ password }}

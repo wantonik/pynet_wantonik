@@ -1,0 +1,32 @@
+---
+# Use Ansible to configure your 'primary Ethernet interface' as follows:
+# interface description: *** IN USE ***
+# switchport mode: access
+# VLAN: <one of the VLANs created in exercise1>
+# This playbook needs to be run from ~/ARISTA/ directory.
+
+- name: Setting up Ethernet4 (primary) - description and access
+  hosts: arista
+
+  tasks:
+    - name: Setting up description on Ethernet4 of SECOND VLAN
+      eos_interface: name=Ethernet4 description="*** IN USE ***"
+          username={{ eapi_username }}
+          password={{ eapi_password }}
+          host={{ eapi_hostname }}
+          port={{ eapi_port }}
+          transport=https
+
+    - name: Setting up access mode for Ethernet4 of SECOND VLAN, VLAN111
+      eos_switchport: name=Ethernet4 mode=access access_vlan=111
+          username={{ eapi_username }}
+          password={{ eapi_password }}
+          host={{ eapi_hostname }}
+          port={{ eapi_port }}
+          transport=https
+
+
+
+
+
+

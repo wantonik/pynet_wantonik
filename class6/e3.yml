@@ -1,0 +1,18 @@
+---
+# Use Ansible to configure your 'primary Ethernet interface' as follows:
+# switchport mode: trunk
+# trunk native VLAN: VLAN1
+# VLAN: <the 3 VLANs created in exercise1>
+# This playbook needs to be run from ~/ARISTA/ directory.
+
+- name: Setting up Ethernet4 (primary) to trunk on all 3 VLANs
+  hosts: arista
+
+  tasks:
+    - name: Setting up trunk mode for Ethernet4 of ALL VLANs
+      eos_switchport: name=Ethernet4 mode=trunk trunk_native_vlan=1 trunk_allowed_vlans=101,111,121
+          username={{ eapi_username }}
+          password={{ eapi_password }}
+          host={{ eapi_hostname }}
+          port={{ eapi_port }}
+          transport=https
