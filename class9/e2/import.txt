@@ -1,0 +1,38 @@
+(applied_python)[wantonik@ip-172-30-0-4 e2]$ python
+Python 2.7.12 (default, Sep  1 2016, 22:14:00) 
+[GCC 4.8.3 20140911 (Red Hat 4.8.3-9)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import mytest
+>>> 
+>>> from mytest import func1
+>>> from mytest import func1, func2, func3
+>>> 
+>>> quit()
+(applied_python)[wantonik@ip-172-30-0-4 e2]$ python
+Python 2.7.12 (default, Sep  1 2016, 22:14:00) 
+[GCC 4.8.3 20140911 (Red Hat 4.8.3-9)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import mytest
+>>> 
+>>> mytest.func1()
+Excercise_1 from class9 - world.py
+>>> 
+>>> mytest.func2()
+Excercise_1 from class9 - simple.py
+>>> 
+>>> mytest.func3()
+Excercise_1 from class9 - whatever.py
+>>> 
+>>> 
+>>> from mytest import func1, func2, func3
+>>> 
+>>> func1()
+Excercise_1 from class9 - world.py
+>>> 
+>>> func2()
+Excercise_1 from class9 - simple.py
+>>> 
+>>> func3()
+Excercise_1 from class9 - whatever.py
+>>> 
+

@@ -1,0 +1,37 @@
+__init__.py file updated with the below:
+
+from mytest.world import func1, MyClass
+from mytest.simple import func2
+from mytest.whatever import func3
+
+__all__ = ('func1', 'func2', 'func3', 'MyClass')
+
+
+Test in Python interactive shell:
+from mytest import *
+>>> dir()
+['MyClass', '__builtins__', '__doc__', '__name__', '__package__', 'func1', 'func2', 'func3']
+>>> 
+>>> MyClass()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: __init__() takes exactly 4 arguments (1 given)
+>>> MyClass('something', 'stupid', 'given')
+<mytest.world.MyClass object at 0x7f99e5108990>
+>>> 
+>>> func1()
+Excercise_8 from class9 - world.py
+>>> 
+>>> func2()
+Excercise_8 from class9 - simple.py
+>>> 
+>>> func3()
+Excercise_8 from class9 - whatever.py
+>>> 
+>>> my_obj = MyClass('something', 'stupid', 'given')
+>>> my_obj.hello()
+Hello using 3 variables: something stupid given
+>>> 
+>>> 
+>>>
+

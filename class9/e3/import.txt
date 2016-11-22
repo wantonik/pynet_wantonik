@@ -1,0 +1,23 @@
+(applied_python)[wantonik@ip-172-30-0-4 e3]$ pwd
+/home/wantonik/pynet_wantonik/class9/e3
+(applied_python)[wantonik@ip-172-30-0-4 e3]$ ll
+total 8
+-rw-rw-r-- 1 wantonik wantonik  969 Nov 22 06:38 import.txt
+drwxrwxr-x 2 wantonik wantonik 4096 Nov 22 06:40 mytest
+(applied_python)[wantonik@ip-172-30-0-4 e3]$ python
+Python 2.7.12 (default, Sep  1 2016, 22:14:00) 
+[GCC 4.8.3 20140911 (Red Hat 4.8.3-9)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from mytest import *
+>>> 
+>>> func1()
+Excercise_1 from class9 - world.py
+>>> 
+>>> func2()
+Excercise_1 from class9 - simple.py
+>>> 
+>>> func3()
+Excercise_1 from class9 - whatever.py
+>>> 
+>>> 
+

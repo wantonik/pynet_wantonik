@@ -1,0 +1,25 @@
+(applied_python)[wantonik@ip-172-30-0-4 e1]$ pwd
+/home/wantonik/pynet_wantonik/class9/e1
+(applied_python)[wantonik@ip-172-30-0-4 e1]$ python
+Python 2.7.12 (default, Sep  1 2016, 22:14:00) 
+[GCC 4.8.3 20140911 (Red Hat 4.8.3-9)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import mytest
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ImportError: No module named mytest
+>>> 
+>>> import mytest.world
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ImportError: No module named mytest.world
+>>> 
+>>> import mytest.whatever
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ImportError: No module named mytest.whatever
+>>> import mytest.simple
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ImportError: No module named mytest.simple
+>>> 

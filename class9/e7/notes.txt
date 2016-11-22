@@ -1,0 +1,37 @@
+~/.bashrc file has been modified to add the below path to PYTHONPATH variable:
+/home/wantonik/pynet_wantonik/class9/e8
+
+
+Below is check if this was successful:
+
+(applied_python)[wantonik@ip-172-30-0-4 class9]$ echo $PYTHONPATH
+/home/wantonik/DJANGOX/djproject/:/home/wantonik/pynet_wantonik/class9/e8
+(applied_python)[wantonik@ip-172-30-0-4 class9]$ 
+(applied_python)[wantonik@ip-172-30-0-4 class9]$ python
+Python 2.7.12 (default, Sep  1 2016, 22:14:00) 
+[GCC 4.8.3 20140911 (Red Hat 4.8.3-9)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import sys
+>>> 
+>>> sys.path
+['', '/home/wantonik/DJANGOX/djproject', '/home/wantonik/pynet_wantonik/class9/e8', '/home/wantonik/applied_python/local/lib64/python2.7/site-packages', '/home/wantonik/applied_python/local/lib/python2.7/site-packages', '/home/wantonik/applied_python/lib64/python2.7', '/home/wantonik/applied_python/lib/python2.7', '/home/wantonik/applied_python/lib64/python2.7/site-packages', '/home/wantonik/applied_python/lib/python2.7/site-packages', '/home/wantonik/applied_python/lib64/python2.7/lib-dynload', '/usr/lib64/python2.7', '/usr/lib/python2.7']
+>>> 
+>>> from pprint import pprint
+>>> 
+>>> pprint(sys.path)
+['',
+ '/home/wantonik/DJANGOX/djproject',
+ '/home/wantonik/pynet_wantonik/class9/e8',
+ '/home/wantonik/applied_python/local/lib64/python2.7/site-packages',
+ '/home/wantonik/applied_python/local/lib/python2.7/site-packages',
+ '/home/wantonik/applied_python/lib64/python2.7',
+ '/home/wantonik/applied_python/lib/python2.7',
+ '/home/wantonik/applied_python/lib64/python2.7/site-packages',
+ '/home/wantonik/applied_python/lib/python2.7/site-packages',
+ '/home/wantonik/applied_python/lib64/python2.7/lib-dynload',
+ '/usr/lib64/python2.7',
+ '/usr/lib/python2.7']
+>>> 
+>>> 
+
+end
