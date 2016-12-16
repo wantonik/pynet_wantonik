@@ -29,9 +29,8 @@ def show_version(a_device):
 
 def main():
     django.setup()
-    start_time = datetime.now()    
-    global net_devices
-    net_devices = NetworkDevice.objects.all() # wihtout global variable this doesn't work
+    start_time = datetime.now()
+    net_devices = NetworkDevice.objects.all()
  
     # Use threads
     for a_device in net_devices:

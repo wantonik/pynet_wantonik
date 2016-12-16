@@ -27,4 +27,5 @@ print '\n', 'Saving changes to DB now - not verbose'
 # Checking if the changes have been made in Django
 print '\n', 'Listing device name, device type and device vendor...'
 for a_device in net_devices:
-    print a_device.device_name, 2 * '|', a_device.device_type, 2 * '|', a_device.vendor
+    print "{} || {} || {}".format(a_device.device_name, a_device.device_type, a_device.vendor)
+    #print a_device.device_name, 2 * '|', a_device.device_type, 2 * '|', a_device.vendor

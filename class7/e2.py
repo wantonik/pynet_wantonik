@@ -24,7 +24,7 @@ def show_current_vlan_config():
     print 'How many elements it has: ', len(show_vlan)
     #print show_vlan
     #print 40 * '0', '\n'
-    #pprint(show_vlan)
+    pprint(show_vlan)
     print 40 * '1', '\n'
 
     # ['vlans'] section
